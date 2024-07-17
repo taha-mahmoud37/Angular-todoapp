@@ -49,4 +49,7 @@
       </li>
     </ul>
   </div>
+  <div (click)="clearList()" *ngIf="listItems.length > 0">
+    <button class="btn mt-3 mx-4">Clear List</button>
+  </div>
 </section>

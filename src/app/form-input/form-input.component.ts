@@ -49,4 +49,8 @@ export class FormInputComponent implements OnInit {
     localStorage.setItem('ItemsList', JSON.stringify(this.listItems));
     this.numOfList = this.listItems.length;
   }
+  clearList() {
+    this.listItems.length = 0;
+    localStorage.setItem('ItemsList', JSON.stringify(this.listItems));
+  }
 }
