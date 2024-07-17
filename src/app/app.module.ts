@@ -4,19 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListItemComponent } from './list-item/list-item.component';
-import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormInputComponent } from './form-input/form-input.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListItemComponent,
-    FormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ListItemComponent, FormInputComponent],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

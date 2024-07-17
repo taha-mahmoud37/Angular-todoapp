@@ -1,0 +1,52 @@
+<section class="w-75 mx-auto py-3">
+  <form [formGroup]="todoForm" (ngSubmit)="submitForm(todoForm)" class="form">
+    <div class="item">
+      <label for="inputName"></label>
+      <input
+        type="text"
+        id="inputName"
+        formControlName="inputName"
+        class="form-control"
+      />
+      <div
+        class="bg-danger text-white rounded-2 w-50 mt-3 px-4 py-1"
+        *ngIf="todoForm.get('item')?.errors && todoForm.get('item')?.touched"
+      >
+        <p *ngIf="todoForm.get('item')?.getError('required')">
+          This item is required
+        </p>
+        <p *ngIf="todoForm.get('item')?.getError('minlength')">
+          This item is minlength 3
+        </p>
+        <p *ngIf="todoForm.get('item')?.getError('maxlength')">
+          This item is maxlength 15
+        </p>
+      </div>
+    </div>
+
+    <button [disabled]="todoForm.invalid" class="btn mt-3" type="submit">
+      add task
+    </button>
+  </form>
+</section>
+
+<section class="w-100 py-3 list-content">
+  <div class="empty" *ngIf="listItems.length == 0">
+    Enter your <span class="text-white-50">First todo</span> item
+  </div>
+  <div *ngIf="listItems.length > 0">
+    <h2 class="text-center">task to do - {{ numOfList }}</h2>
+    <ul>
+      <li class="item" *ngFor="let item of listItems; index as i">
+        <p>{{ item.inputName }}</p>
+        <div>
+          <i
+            (click)="finishTask($event)"
+            class="fa-solid fa-check btns pe-2"
+          ></i>
+          <i (click)="deleteEl(i)" class="fa-solid fa-trash-can btns"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
