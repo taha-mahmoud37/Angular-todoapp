@@ -26,10 +26,6 @@ input[type="text"]::placeholder {
   font-size: inherit;
 }
 
-.item {
-  width: 100%;
-}
-
 .bg-danger p {
   text-transform: capitalize;
   font-size: 1.2rem;
@@ -68,7 +64,7 @@ input[type="text"]::placeholder {
 }
 
 .list-content ul {
-  width: 500px;
+  width: 50%;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -79,7 +75,7 @@ input[type="text"]::placeholder {
 .list-content .item {
   background-color: #15101c;
   color: #9e78cf;
-  width: 100%;
+  width: 80%;
   padding: 35px 20px;
   display: flex;
   align-items: center;
@@ -112,4 +108,122 @@ input[type="text"]::placeholder {
   color: #9e78cf;
   font-weight: 600;
   font-family: "Rubik", sans-serif;
+}
+@media (max-width: 992px) {
+  .form-input {
+    width: 100% !important;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .form .item {
+    width: 90%;
+  }
+  .form-input input {
+    width: 100%;
+  }
+  .form .btn {
+    font-size: 2rem;
+    width: 220px !important;
+  }
+  .list-content {
+    width: 100%;
+  }
+  .list-content ul {
+    width: 100% !important;
+    padding-left: 0;
+  }
+  .list-content h2 {
+    font-size: 3rem;
+  }
+
+  .empty {
+    font-size: 3rem;
+  }
+
+  .clear button {
+    font-size: 2rem;
+    width: 220px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-input {
+    width: 100% !important;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .form .item {
+    width: 90%;
+  }
+  .form-input input {
+    width: 100%;
+  }
+  .form .btn {
+    font-size: 1.5rem;
+    width: 220px !important;
+  }
+  .list-content {
+    width: 100%;
+  }
+  .list-content ul {
+    width: 100% !important;
+    padding-left: 0;
+  }
+  .list-content h2 {
+    font-size: 3rem;
+  }
+
+  .empty {
+    font-size: 3rem;
+  }
+
+  .clear button {
+    font-size: 1.5rem;
+    width: 220px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-input {
+    width: 100% !important;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .form .item {
+    width: 90%;
+  }
+  .form-input input {
+    width: 100%;
+  }
+  .list-content {
+    width: 100%;
+  }
+  .list-content ul {
+    width: 100% !important;
+    padding-left: 0;
+  }
+  .list-content h2 {
+    font-size: 2rem;
+  }
+  .empty {
+    font-size: 2rem;
+  }
 }
